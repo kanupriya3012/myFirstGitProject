@@ -37,7 +37,7 @@ object xmlParsing {
     println("Select column List "+selectColumnList)
     val mapColumnList=selectColumnList.map(name=>col(name).alias(name.replace(".","_")))
     println("map="+mapColumnList)
-    //xmlDataframe.select(mapColumnList:_*).show()
+    xmlDataframe.select(mapColumnList:_*).show()
 
   }
 

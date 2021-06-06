@@ -1,4 +1,4 @@
-package com.transformations
+package com.helloWorld
 
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types._

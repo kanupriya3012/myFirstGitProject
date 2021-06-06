@@ -1,5 +1,5 @@
 package com.sparkProject
-import sparkEssentials._
+import utils._
 
 class WordCountClass {
 

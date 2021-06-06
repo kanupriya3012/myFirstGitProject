@@ -1,5 +1,5 @@
 package com.sparkProject
-import sparkEssentials._
+import utils._
 
 object wordCount extends App {
 
@@ -8,6 +8,5 @@ object wordCount extends App {
   var keyMapRdd=mapRdd.map(word=>(word,1))
 
   var reducedRdd=keyMapRdd.reduceByKey(_+_)
-  reducedRdd.foreach((result: Tuple2[String, Int])=>println(result._1,result._2))
-
+  reducedRdd.collect()
 }

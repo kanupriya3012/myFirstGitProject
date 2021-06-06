@@ -37,7 +37,7 @@ object xmlParsing {
     println("Select column List "+selectColumnList)
     val mapColumnList=selectColumnList.map(name=>col(name).alias(name.replace(".","_")))
     println("map="+mapColumnList)
-    //xmlDataframe.select(mapColumnList:_*).show()
+    xmlDataframe.select(mapColumnList:_*).show()
 
   }
 
@@ -63,7 +63,7 @@ object xmlParsing {
     println("{PRINT}:Reading xml dataframe..")
 
 
-    val xml_file_path = "C:\\Kanu\\xmlFile\\sampleXml.xml"
+    val xml_file_path = "C:\\xmlTestProject\\dataFiles\\sampleXml.xml"
     var xml_df = spark.read.option("rowTag", "feeds").xml(xml_file_path)
     xml_df.printSchema()
     xml_df.show(5)

@@ -1,4 +1,4 @@
-package com.helloWorld
+package com.transformations
 
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types._
@@ -28,7 +28,7 @@ object mapObject extends App {
   csvDF=spark.read.format("csv")
                   .schema(csvSchema)
                   .option("header","true")
-                  .load("C:\\Kanu\\salaryMap.csv")
+                  .load("C:\\xmlTestProject\\dataFiles\\salaryMap.csv")
 
 csvDF.show(false)
 
